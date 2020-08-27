@@ -1,8 +1,8 @@
 extends Node2D
 
 export (String) var color;
-export var mines_adjacent = 0;
-export var is_mine = false;
+export (int) var mines_adjacent = 0;
+export (bool) var is_mine = false;
 
 
 
@@ -11,6 +11,5 @@ func _ready():
 	pass # Replace with function body.
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func set_adjacent_mines(number_of_mines):
+	mines_adjacent = number_of_mines;
